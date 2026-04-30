@@ -25,5 +25,5 @@ data class CreateMeetingRequest(
 
     @Size(min = 1, message = "Должен быть хотя бы один участник")
     @NotNull(message = "Список участников обязателен")
-    var participantIds: MutableList<UUID?>? = null
+    val participantIds: List<UUID> = emptyList()
 )

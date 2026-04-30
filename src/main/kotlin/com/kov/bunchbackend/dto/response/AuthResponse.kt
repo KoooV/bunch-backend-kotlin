@@ -1,6 +1,5 @@
 package com.kov.bunchbackend.dto.response
 
-import com.kov.bunchbackend.model.User
 import java.time.Instant
 import java.util.*
 

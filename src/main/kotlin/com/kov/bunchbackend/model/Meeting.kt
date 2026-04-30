@@ -7,7 +7,7 @@ import org.hibernate.annotations.UuidGenerator
 import org.springframework.data.annotation.CreatedDate
 import java.time.Instant
 import java.util.*
-import kotlin.time.ExperimentalTime
+
 
 
 @Entity

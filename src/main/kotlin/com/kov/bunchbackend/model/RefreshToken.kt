@@ -3,14 +3,14 @@ package com.kov.bunchbackend.model
 import jakarta.persistence.*
 import jakarta.validation.constraints.NotBlank
 import org.springframework.data.annotation.CreatedDate
+import java.time.Instant
 import java.util.*
-import kotlin.time.Clock
-import kotlin.time.ExperimentalTime
-import kotlin.time.Instant
+
+
 
 @Entity
 @Table(name = "refresh_tokens")
-class RefreshToken @OptIn(ExperimentalTime::class) constructor(
+class RefreshToken(
     @Id
     var id: UUID,
 
@@ -35,10 +35,8 @@ class RefreshToken @OptIn(ExperimentalTime::class) constructor(
     @Column(name = "revoked", nullable = false)
     var revoked: Boolean = false
     ){
-    @OptIn(ExperimentalTime::class)
-    fun isExpired(): Boolean {
-        return expiresAt < Clock.System.now()
-    }
+
+    fun isExpired(): Boolean { return Instant.now().isAfter(expiresAt) }
 }
 
 

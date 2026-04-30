@@ -16,5 +16,5 @@ data class MeetingResponse(
     var status: MeetingStatus? = null,
     var createdAt: Instant? = null,
     var updatedAt: Instant? = null,
-    var participants: MutableList<ParticipantResponse?>? = null
+    val participants: List<ParticipantResponse?>? = null
 )
