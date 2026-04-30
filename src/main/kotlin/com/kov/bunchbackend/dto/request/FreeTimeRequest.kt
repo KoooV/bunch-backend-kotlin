@@ -7,5 +7,5 @@ import java.util.*
 data class FreeTimeRequest(
     @NotNull(message = "Хотя бы один участник обязателен")
     @Size(min = 1, message = "Должен быть хотя бы один участник")
-    private var userIds: MutableList<UUID?>? = null
+    var userIds: MutableList<UUID?>? = null
 )

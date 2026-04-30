@@ -9,5 +9,5 @@ data class UpdateAvatarRequest(
         max = 2048,
         message = "URL аватара не должен превышать 2048 символов"
     )
-    private val avatarUrl: String? = null
+    val avatarUrl: String? = null
 )

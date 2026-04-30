@@ -5,7 +5,7 @@ import java.time.Instant
 import java.util.*
 
 data class MeetingResponse(
-    private val id: UUID? = null,
+    val id: UUID? = null,
     var organizerId: UUID? = null,
     var organizerUsername: String? = null,
     var title: String? = null,

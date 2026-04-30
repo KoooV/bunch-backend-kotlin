@@ -5,5 +5,5 @@ import jakarta.validation.constraints.NotNull
 
 data class InvitationActionRequest(
     @NotNull(message = "Статус необходим")
-    private var status: @NotNull(message = "Статус необходим") ParticipantStatus? = null
+    var status: @NotNull(message = "Статус необходим") ParticipantStatus? = null
 )
