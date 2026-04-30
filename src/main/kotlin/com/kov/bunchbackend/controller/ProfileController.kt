@@ -59,7 +59,6 @@ class ProfileController(
      */
     @PutMapping("/avatar")
     fun updateAvatar(
-        @Valid @RequestBody request: @Valid UpdateAvatarRequest?,
         @AuthenticationPrincipal currentUser: CustomUserDetails
     ): ResponseEntity<UserProfileResponse?> {
         val updatedProfile: UserProfileResponse? = profileService.updateAvatar(
