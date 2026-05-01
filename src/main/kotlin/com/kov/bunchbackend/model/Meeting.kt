@@ -42,7 +42,7 @@ class Meeting (
 
     @Enumerated(EnumType.STRING)
     @Column(name = "status", columnDefinition = "meeting_status", nullable = false)
-    var meetingStatus: MeetingStatus? = MeetingStatus.SCHEDULED,
+    var status: MeetingStatus? = MeetingStatus.SCHEDULED,
 
     @CreatedDate
     @Column(name = "created_at", nullable = false)
